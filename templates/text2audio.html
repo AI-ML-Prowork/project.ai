@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Speech</title>
+</head>
+<body>
+    <h2>Put Text In Any Language and generate the Audio:-</h2>
+    <form action="{% url 'text2audio' %}" method="post">
+        {% csrf_token %}
+        <textarea name="text" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">generate Speech</button>
+    </form>
+</body>
+</html>
+
+
+
+{% endblock body %}

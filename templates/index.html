@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .big-button {        
+        background-color: #4CAF;
+        font-size: 24px;
+        padding: 8px 100px;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+</style>
+</head>
+<body>
+<div class="button-container">
+    <a href="/text2image" style="text-decoration: none;">
+        <button class="big-button">Text To Image</button>
+    </a>
+    <a href="/image2text" style="text-decoration: none;">
+        <button class="big-button">Image To Text</button>
+    </a>    
+    <a href="/textclassifier" style="text-decoration: none;">
+        <button class="big-button">Text Classification</button>
+    </a>
+    <a href="/question_answering" style="text-decoration: none;">
+        <button class="big-button">Passage Solving</button>
+    </a>       
+    <a href="/text2audio" style="text-decoration: none;">
+        <button class="big-button">Text To Audio</button>
+    </a>    
+    <a href="/phrasemaking" style="text-decoration: none;">
+        <button class="big-button">Complete The Phrases</button>
+    </a>
+    <a href="/text_to_video" style="text-decoration: none;">
+        <button class="big-button">Image To Video Talking Face</button>
+    </a>
+</div>
+</body>
+</html>
+{% endblock body %}
+

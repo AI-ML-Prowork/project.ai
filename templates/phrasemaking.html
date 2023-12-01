@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+<title> {% block title %}PhraseMaking {% endblock title %}</title>
+</head>
+<body>
+
+<h2>Complete your Phrase Here..</h2>
+<form method="post">
+  {% csrf_token %}
+  <label for="question">Text:</label><br>
+  <input type="text" id="Text" name="text" style="width: 100%;" placeholder="Enter the text..." value="{{ input_text }}"><br><br>
+  <label for="answer">Output:</label><br>
+  <textarea id="Output" name="output" style="width: 100%; height: 150px;" placeholder="The sentence will be: ">{{ output }}</textarea><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+{% endblock body %}

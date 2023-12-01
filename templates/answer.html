@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Answer</title>
+</head>
+<body>
+    <h1>Answer</h1>
+    <p>Context: {{ context }}</p>
+    <p>Question: {{ question }}</p>
+    <p>Answer: {{ answer.answer }}</p>
+    <p>Score: {{ answer.score }}</p>
+</body>
+</html>
+
+{% endblock body %}

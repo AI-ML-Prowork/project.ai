@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Image Result</title>
+</head>
+<body>
+    <h1>Text to Image Result</h1>
+    <img src="data:image/jpeg;base64,{{ img_url }}">
+</body>
+</html>
+
+
+{% endblock body %}

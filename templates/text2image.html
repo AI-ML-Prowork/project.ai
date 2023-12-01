@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text To Image</title>
+</head>
+<body>
+    <h1>Pass a Text to get the closest Image..</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="text_input">Enter Text:</label><br>
+        <input type="text" id="text_input" name="text_input"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+{% endblock body %}

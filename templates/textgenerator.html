@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Generation</title>
+</head>
+<body>
+    <h1>Text Generation</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="prompt">Enter Prompt:</label><br>
+        <input type="text" id="prompt" name="prompt"><br><br>
+        <button type="submit">Generate Text</button>
+    </form>
+</body>
+</html>
+
+
+
+{% endblock body %}

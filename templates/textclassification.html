@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <h1>Put a phrase and get a category from whichit belong..</h1>
+    <form method="POST" action="{% url 'textclassifier' %}">
+        {% csrf_token %}
+        <label for="sequence">Enter Text:</label><br>
+        <input type="text" id="sequence" name="sequence"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+{% endblock body %}

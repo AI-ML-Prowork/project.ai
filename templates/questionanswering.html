@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask a Question</title>
+</head>
+<body>
+    <h1>Place Your Passage and ask Questions...</h1>
+    <form method="POST" action="{% url 'question_answering' %}">
+        {% csrf_token %}
+        <label for="context">Enter Context:</label><br>
+        <textarea id="context" name="context" rows="4" cols="50"></textarea><br><br>
+        <label for="question">Enter Question:</label><br>
+        <input type="text" id="question" name="question"><br><br>
+        <button type="submit">Get Answer</button>
+    </form>
+</body>
+</html>
+
+{% endblock body %}
+

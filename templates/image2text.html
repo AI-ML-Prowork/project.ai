@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image to Text</title>
+</head>
+<body>
+    <h1>Upload an Image  and see what it tells about the Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+
+
+{% endblock body %}

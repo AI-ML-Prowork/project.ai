@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "text_to_image_generator/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "text_to_image_generator/wsgi.py"
+        }
+    ]
+}
