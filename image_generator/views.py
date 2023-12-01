@@ -64,16 +64,25 @@ def textclassifier(request):
 
 
 from gtts import gTTS
-from django.http import FileResponse
+from django.http import HttpResponse
+from io import BytesIO
+
 @csrf_exempt
 def text2audio(request):
     if request.method == 'POST':
         text = request.POST.get('text', '')
         if text:
             speech = gTTS(text)
-            speech.save("text_speech.mp3")
-            return FileResponse(open("text_speech.mp3", 'rb'), as_attachment=True)
+            audio_buffer = BytesIO()
+            speech.write_to_fp(audio_buffer)
+            audio_buffer.seek(0)
+            
+            response = HttpResponse(audio_buffer.read(), content_type='audio/mpeg')
+            response['Content-Disposition'] = 'attachment; filename="text_speech.mp3"'
+            return response
+
     return render(request, 'text2audio.html')
+
 
 
 def text_to_video(request):
