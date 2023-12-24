@@ -1,18 +1,79 @@
 {% extends "base.html" %}
 
 {% block body %}
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Results{% endblock title %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #2b2b2b;
+                color: #e6e6e6;
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+    
+            .container {
+                margin-top: 4rem;
+                text-align: center;
+            }
+    
+            h1 {
+                color: #ff6666;
+                font-size: 3rem;
+                text-decoration: underline;
+            }
+    
+            img {
+                max-width: 80%;
+                height: auto;
+                margin-top: 2rem;
+                border: 3px solid #ffd700;
+                border-radius: 8px;
+            }
+    
+            a {
+                display: inline-block;
+                background-color: #ff6666;
+                color: #fff;
+                text-decoration: none;
+                padding: 0.7rem 1.5rem;
+                margin-top: 2rem;
+                border: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+                border-radius: 8px;
+            }
+    
+            a:hover {
+                background-color: #ff4033;
+            }
+        </style>
 </head>
 <body>
-    <h1>Results</h1>
-    <p>Sequence: {{ sequence }}</p>
-    <p>Expected Category: {{ label }}</p>
-    <p>Highest percentage: {{ percentage }}</p>
+    <div class="container">
+        <h1>Results</h1>
+        <div class="result-info">
+            <p><strong>Sequence:</strong> {{ sequence }}</p>
+            <p><strong>Expected Category:</strong> {{ label }}</p>
+            <p><strong>Highest Percentage:</strong> {{ percentage }}</p>
+        </div>
+    </div>
+
+    <!-- Optional Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 </html>
-
 {% endblock body %}

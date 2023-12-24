@@ -1,18 +1,61 @@
 {% extends "base.html" %}
 
-
 {% block body %}
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Text to Image Result</title>
+    <title>Dark Arts: Text to Image Result</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: #e6e6e6;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .container {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff6666;
+            font-size: 3rem;
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 2rem;
+            border: 3px solid #ffd700;
+            border-radius: 8px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ff6666;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.7rem 1.5rem;
+            margin-top: 2rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background-color: #ff4033;
+        }
+    </style>
 </head>
 <body>
-    <h1>Text to Image Result</h1>
-    <img src="data:image/jpeg;base64,{{ img_url }}">
+    <div class="container">
+        <h1>Now, Download it</h1>
+        <img src="data:image/jpeg;base64,{{ img_url }}" alt="Forbidden Image">
+        <br>
+        <a href="/">Generate Another</a>
+    </div>
 </body>
 </html>
-
-
 {% endblock body %}

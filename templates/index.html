@@ -1,52 +1,74 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% block body %}
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-    .big-button {        
-        background-color: #4CAF;
-        font-size: 24px;
-        padding: 8px 100px;
-        display: block;
-        margin: 10px auto;
-        text-align: center;
-    }
-    .button-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 70vh;
-    }
-</style>
-</head>
-<body>
-<div class="button-container">
-    <a href="/text2image" style="text-decoration: none;">
-        <button class="big-button">Text To Image</button>
-    </a>
-    <a href="/image2text" style="text-decoration: none;">
-        <button class="big-button">Image To Text</button>
-    </a>    
-    <a href="/textclassifier" style="text-decoration: none;">
-        <button class="big-button">Text Classification</button>
-    </a>
-    <a href="/question_answering" style="text-decoration: none;">
-        <button class="big-button">Passage Solving</button>
-    </a>       
-    <a href="/text2audio" style="text-decoration: none;">
-        <button class="big-button">Text To Audio</button>
-    </a>    
-    <a href="/phrasemaking" style="text-decoration: none;">
-        <button class="big-button">Complete The Phrases</button>
-    </a>
-    <a href="/text_to_video" style="text-decoration: none;">
-        <button class="big-button">Image To Video Talking Face</button>
-    </a>
-</div>
-</body>
-</html>
-{% endblock body %}
-
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        body {
+          overflow: hidden;
+          background: url('https://media.giphy.com/media/NXEuPHCOiJujANVznL/giphy.gif') fixed center; /* Replace 'your-background.gif' with the path to your GIF */
+          background-size: cover; /* Adjust as needed: cover, contain, or specific size */
+        }
+        
+        /* Animation for a subtle background movement */
+        @keyframes gradientAnimation {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        
+        .big-button {
+          background-color: #ff9900;
+          color: #333300;
+          font-size: 20px;
+          padding: 10px 50px; /* Adjusted padding for a more reasonable size */
+          display: block;
+          margin: 15px auto;
+          text-align: center;
+          border: 2px solid #006600;
+          border-radius: 30px;
+          transition: all 0.3s ease-in-out;
+          font-weight: bold;
+        }
+        
+        .big-button:hover {
+          background-color: #ff3300;
+          color: #ffffff;
+          transform: scale(1.1);
+        }
+        
+        .button-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-width: 800px; /* Added max-width to prevent buttons from spreading too far */
+          margin: 20px auto 0; /* Adjusted margin to add space at the top */
+          padding: 20px; /* Padding for some space around the buttons */
+          background: linear-gradient(to right, #bbb3bb, #e0a6e0); /* Gradient background */
+          border-radius: 20px; /* Slight rounding for a softer look */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+          animation: gradientAnimation 20s infinite; /* Apply the animation to the background */
+        }
+      </style>
+    </head>
+    <body>
+      <div class="button-container">
+        <a href="/image_to_text" style="text-decoration: none;"><button class="big-button">Image To Text</button></a>
+        
+        <a href="/text2image" style="text-decoration: none;"><button class="big-button">Text To Image</button></a>
+        <a href="/textclassifier" style="text-decoration: none;"><button class="big-button">Text Classification</button></a>
+        <a href="/question_answering" style="text-decoration: none;"><button class="big-button">Passage Solving</button></a>
+        <a href="/phrasemaking" style="text-decoration: none;"><button class="big-button">Complete The Phrases</button></a>
+        <a href="/text2audio" style="text-decoration: none;"><button class="big-button">Text To Audio</button></a>
+      </div>
+    </body>
+  </html>
+{% endblock %}
