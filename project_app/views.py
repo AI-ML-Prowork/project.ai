@@ -1,37 +1,17 @@
 from django.shortcuts import render
-from django.shortcuts import render
-from django.shortcuts import render
 from gtts import gTTS
-from django.http import HttpResponse
 from io import BytesIO
-from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
-from django.http import HttpResponse
 from .phrase import generate_text
-from django.views.decorators.csrf import csrf_exempt
 from django import forms
-from django.http import HttpResponse
 from .questionanswering import answer_question
 from django.views.decorators.csrf import csrf_exempt
-from django import forms
 from django.http import HttpResponse
 from .image2text import image_to_text
-from PIL import Image
-from io import BytesIO
 import io
 import base64
-from django.views.decorators.csrf import csrf_exempt
-from django import forms
 from .text2image import query
 from PIL import Image
-import io
-import base64
-from django.views.decorators.csrf import csrf_exempt
-from django import forms
-from django.shortcuts import render
-from django.http import HttpResponse
 from .textclassification import classifier
-from django.views.decorators.csrf import csrf_exempt
 from .labels import CANDIDATE_LABELS
 
 def index(request):
