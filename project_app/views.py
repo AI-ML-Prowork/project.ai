@@ -136,3 +136,8 @@ def text2audio(request):
             return response
 
     return render(request, 'text2audio.html')
+
+
+
+def text_to_video(request):
+    return render(request, 'text2video.html')

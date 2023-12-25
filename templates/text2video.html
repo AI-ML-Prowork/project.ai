@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Video</title>
+</head>
+<body>
+    <iframe
+        src="https://cvpr-ml-talking-face.hf.space"
+        frameborder="0"
+        width="1380"
+        height="1600"
+    ></iframe>
+</body>
+</html> 
+
+
+
+
+
+{% comment %} <script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.1.2/gradio.js"
+></script>
+
+<gradio-app
+	space="https://cvpr-ml-talking-face.hf.space/"
+	eager="true"
+	initial_height="0px"
+></gradio-app> {% endcomment %}
+
+{% endblock body %}

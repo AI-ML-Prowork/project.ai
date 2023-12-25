@@ -10,6 +10,7 @@ urlpatterns = [
     path("question_answering/", question_answering, name="question_answering"),
     path("phrasemaking/", phrasemaking, name="phrasemaking"), 
     path("text2audio/", text2audio, name="text2audio"),
+    path('text2video/', text_to_video, name='text_to_video'),
 
 
 
